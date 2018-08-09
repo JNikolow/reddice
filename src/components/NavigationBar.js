@@ -6,13 +6,13 @@ export default () => {
     <nav className="navbar navbar-default">
         <div className="container-fluid">
             <div className="navbar-header">
-            <NavLink to="/" className="navbar-brand">Red Dice</NavLink>
+                <NavLink to="/" className="navbar-brand">Red Dice</NavLink>
             </div>
 
             <div className="collapse navbar-collapse">
                 <ul className="nav navbar-nav navbar-right">
                     <li>
-                        <NavLink to="/">Sign up</NavLink>
+                        <NavLink to="/signup">Sign up</NavLink>
                     </li>
                 </ul>
             </div>
