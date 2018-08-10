@@ -1,6 +1,7 @@
 import React from 'react'
 import timezones from '../../data/timezones'
 import map from 'lodash/map'
+import axios from 'axios'
 
 class SignupForm extends React.Component {
     constructor(props) {
@@ -16,17 +17,18 @@ class SignupForm extends React.Component {
             invalid: false
         }
 
-        this.onChange = this.onChange.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
+    // Explicit event subscription
+    this.onSubmit = this.onSubmit.bind(this);
     }
 
-    onChange(e) {
-      this.setState({ [e.target.name]: e.target.value });
+    // Implicit event subscription
+    onChange = (e) => {
+        this.setState({ [e.target.name]: e.target.value });
     }
 
     onSubmit(e) {
       e.preventDefault();
-      console.log(this.state);
+      axios.post('/api/users', { user: this.state });
     }
 
     render() {
