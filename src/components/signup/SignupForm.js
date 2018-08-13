@@ -19,7 +19,7 @@ class SignupForm extends React.Component {
         }
 
     // Explicit event subscription
-    this.onSubmit = this.onSubmit.bind(this);
+      this.onSubmit = this.onSubmit.bind(this);
     }
 
     // Implicit event subscription
